@@ -1,8 +1,24 @@
+//Locomotive Scroll
+
 const scroll = new LocomotiveScroll({
     el: document.querySelector('#main'),
     smooth: true
 });
 
+
+document.getElementById('contact-link').addEventListener('click', function (e) {
+    e.preventDefault();
+    scroll.scrollTo('#box3'); // Smooth scroll to the target section
+});
+
+document.getElementById('service-link').addEventListener('click', function (e) {
+    e.preventDefault();
+    scroll.scrollTo('#box2'); // Smooth scroll to the target section
+});
+
+
+
+//Landing page animation
 
 function firstPageAnim() {
     var tl = gsap.timeline();
@@ -14,15 +30,16 @@ function firstPageAnim() {
         duration: 2.5,
         delay: -1,
         stagger: 0.6,
-      })
+    })
 
-  }
-
-  firstPageAnim()
-
+}
+firstPageAnim()
 
 
-emailjs.init('UkVHZ3UvAPJXrXFav');
+//Email js for uploading email and messages
+
+//public key of the email js account
+emailjs.init('public key');
 
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -31,36 +48,18 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     const message = document.getElementById('message').value;
     // const name = document.getElementById('name').value;
 
-    emailjs.send("service_32c6dn9", "template_db73v0h", {
+    emailjs.send("service id", "template  id", {
         // name:name,
         subject: email,
         message: message
     })
-    .then(function (response) {
+        .then(function (response) {
 
-   document.getElementById('email').value="";
-  document.getElementById('message').value="";
-        alert('Email sent successfully!');
+            document.getElementById('email').value = "";
+            document.getElementById('message').value = "";
+            alert('Email sent successfully!');
 
-    }, function (error) {
-        alert('Failed to send email: ' + error.text);
-    });
+        }, function (error) {
+            alert('Failed to send email: ' + error.text);
+        });
 });
-
-document.getElementById('contact-link').addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default anchor behavior
-    scroll.scrollTo('#box3'); // Smooth scroll to the target section
-});
-document.getElementById('service-link').addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default anchor behavior
-    scroll.scrollTo('#box2'); // Smooth scroll to the target section
-});
-
-// document.getElementById('contact-link').addEventListener('click', function (e) {
-//     e.preventDefault();
-//     scroll.scrollTo(document.querySelector('#target-section'), {
-//         duration: 1000,
-//         offset: 0,
-//         easing: [0.25, 0.0, 0.35, 1.0]
-//     });
-// });

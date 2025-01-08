@@ -48,8 +48,8 @@ body {
     text-decoration: none;
 }
 
-#navbar ul a:hover{
-    color:#000
+#navbar ul a:hover {
+    color: #000
 }
 
 
@@ -57,49 +57,18 @@ body {
     margin-top: 40px;
 }
 
-#landing-page #headings{
+#landing-page #headings {
     width: fit-content;
-   font-size: 55px;
+    font-size: 55px;
     width: fit-content;
     margin-left: 30px;
     overflow: hidden;
 
 }
 
-#headings h1{
+#headings h1 {
     transform: translateY(100%);
 }
-
- #contact-us{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    background-color: red;
-    margin-top: 190px;
- }
-#contact-us a {
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 30px;
-    color: white;
-    position: relative;
-}
-
-#contact-us a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    transition: width 0.4s ease-in-out;
-}
-
-#contact-us a:hover::after {
-    width: 100%;
-}
-
 
 
 #box2 {
@@ -119,7 +88,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* Grid Layout for Services */
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -127,7 +96,7 @@ body {
     padding: 0 20px;
 }
 
-/* Service Card Styling */
+
 .service-card {
     background-color: #fff;
     padding: 20px;
@@ -139,7 +108,7 @@ body {
     transition: box-shadow 0.3s ease;
 }
 
-/* Hover Effect Fill Background */
+
 .service-card::before {
     content: '';
     position: absolute;
@@ -164,7 +133,7 @@ body {
     color: #fff;
 }
 
-/* Service Card Text Styling */
+
 .service-card h3 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -223,7 +192,6 @@ body {
 #message {
     height: 20vh;
     width: 80%;
-
     font-size: 20px;
     border: 1px solid #2a8e9e;
     border-radius: 10px;
@@ -244,6 +212,7 @@ body {
     cursor: pointer;
     transition: background 0.3s;
 }
+
 #submit:hover {
     background: linear-gradient(135deg, #1d1e20, #2a8e9e);
 }
