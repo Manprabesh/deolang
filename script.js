@@ -51,6 +51,10 @@ document.getElementById('contact-link').addEventListener('click', function (e) {
     e.preventDefault(); // Prevent default anchor behavior
     scroll.scrollTo('#box3'); // Smooth scroll to the target section
 });
+document.getElementById('service-link').addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    scroll.scrollTo('#box2'); // Smooth scroll to the target section
+});
 
 // document.getElementById('contact-link').addEventListener('click', function (e) {
 //     e.preventDefault();
